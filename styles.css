@@ -14,9 +14,14 @@ header {
 }
 
 .logo {
-  width: 100px;
+  width: 140px;          /* Bigger logo */
   height: auto;
-  margin-bottom: 1rem;
+  display: block;        /* Ensures margin auto centers it nicely */
+  margin: 0 auto 0.3rem auto;  /* Smaller bottom margin (gap to heading) */
+}
+
+header h1 {
+  margin-top: 0.2rem;    /* Less gap above the heading */
 }
 
 .tagline {
