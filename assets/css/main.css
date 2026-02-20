@@ -2686,3 +2686,41 @@ input, select, textarea {
 			}
 
 	}
+
+	/* Full-width hero */
+#hero-wrapper {
+  padding: 2.5em 0 1.5em 0;
+  background: #ffffff;
+}
+
+#hero-wrapper .container {
+  text-align: center;
+}
+
+.hero-image {
+  display: block;
+  width: 100%;
+  max-width: 1200px;   /* keeps it intentional, not stretched */
+  margin: 0 auto;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-buttons {
+  margin-top: 1.0em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.store-badge {
+  height: 56px;
+  width: auto;
+  display: block;
+}
