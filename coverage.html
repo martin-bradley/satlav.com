@@ -16,6 +16,29 @@
   />
 
   <style>
+
+    @media (max-width: 560px) {
+  .sl-map-card {
+    top: 12px;
+    right: 12px;
+    left: 12px;           /* full-width to avoid awkward overlaps */
+    max-width: none;
+    padding: 10px 12px;
+  }
+
+  .sl-map-sub {
+    margin-bottom: 8px;
+  }
+
+  .sl-map-legend {
+    gap: 6px 8px;
+    font-size: 12px;
+  }
+
+  .sl-map-foot {
+    margin-top: 8px;
+  }
+}
     /* Page-specific */
     .sl-map-wrap {
       position: relative;
@@ -182,7 +205,15 @@ fetch('assets/coverage_points.json')
   });
 
     // Map init (UK centre)
-    const map = L.map('coverageMap', { zoomControl: true }).setView([54.8, -2.5], 6);
+    const isSmall = window.matchMedia('(max-width: 560px)').matches;
+
+    const map = L.map('coverageMap', {
+    zoomControl: !isSmall
+    }).setView([54.8, -2.5], 6);
+
+    if (isSmall) {
+    L.control.zoom({ position: 'bottomleft' }).addTo(map);
+    }
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 18,
