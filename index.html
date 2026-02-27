@@ -83,19 +83,24 @@
       <div class="inner sl-narrow">
         <h2>How Sat Lav works</h2>
 
+        <div class="sl-platform-toggle" role="tablist" aria-label="Platform screenshots">
+          <button class="sl-platform-btn is-active" type="button" data-platform="ios" aria-pressed="true">iOS</button>
+          <button class="sl-platform-btn" type="button" data-platform="android" aria-pressed="false">Android</button>
+        </div>
+
         <div class="sl-core-grid">
           <div class="sl-feature">
-            <img src="images/gallery/fulls/mainmap.png" alt="Find nearest toilet">
+            <img src="images/gallery/fulls/mainmap.png" data-ios="images/gallery/fulls/mainmap.png" data-android="images/gallery/android/android_main_map.png" alt="Find nearest toilet">
             <h3>Find the nearest toilet</h3>
             <p>See nearby toilets with walking distance and time.</p>
           </div>
           <div class="sl-feature">
-            <img src="images/gallery/fulls/detail.png" alt="Clear essential details">
+            <img src="images/gallery/fulls/detail.png" data-ios="images/gallery/fulls/detail.png" data-android="images/gallery/android/android_detail.png" alt="Clear essential details">
             <h3>Clear, essential details</h3>
             <p>Accessibility, hours, radar key and more — clearly shown.</p>
           </div>
           <div class="sl-feature">
-            <img src="images/gallery/fulls/ghost.png" alt="Keep the map accurate">
+            <img src="images/gallery/fulls/ghost.png" data-ios="images/gallery/fulls/ghost.png" data-android="images/gallery/android/android_action_sheet.png" alt="Keep the map accurate">
             <h3>Keep the map accurate</h3>
             <p>Add missing toilets and flag places that aren’t public toilets.</p>
           </div>
@@ -103,22 +108,22 @@
 
         <div class="sl-support-grid">
           <div class="sl-feature">
-            <img src="images/gallery/fulls/add.png" alt="Add a missing toilet">
+            <img src="images/gallery/fulls/add.png" data-ios="images/gallery/fulls/add.png" data-android="images/gallery/android/android_add_toilet.png" alt="Add a missing toilet">
             <h3>Add a missing toilet</h3>
             <p>A quick form — no accounts required.</p>
           </div>
           <div class="sl-feature">
-            <img src="images/gallery/fulls/filter.png" alt="Filter for essentials">
+            <img src="images/gallery/fulls/filter.png" data-ios="images/gallery/fulls/filter.png" data-android="images/gallery/android/android_filter.png" alt="Filter for essentials">
             <h3>Filter for essentials</h3>
             <p>Focus on accessibility or baby changing.</p>
           </div>
           <div class="sl-feature">
-            <img src="images/gallery/fulls/ld.png" alt="Little Distractions">
+            <img src="images/gallery/fulls/ld.png" data-ios="images/gallery/fulls/ld.png" data-android="images/gallery/android/android_ld.png" alt="Little Distractions">
             <h3>Little Distractions</h3>
             <p>Optional games and trivia.</p>
           </div>
           <div class="sl-feature">
-            <img src="images/gallery/fulls/dark.png" alt="Dark Mode">
+            <img src="images/gallery/fulls/dark.png" data-ios="images/gallery/fulls/dark.png" data-android="images/gallery/android/android_dark_mode.png" alt="Dark Mode">
             <h3>Dark Mode</h3>
             <p>The same clarity, designed for low light.</p>
           </div>
@@ -151,6 +156,69 @@
   <script src="assets/js/breakpoints.min.js"></script>
   <script src="assets/js/util.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      const STORAGE_KEY = 'satlav_platform';
+      const DEFAULT_PLATFORM = 'ios';
+
+      function getPlatformFromURL() {
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const p = (params.get('platform') || '').toLowerCase();
+          return (p === 'android' || p === 'ios') ? p : null;
+        } catch (e) {
+          return null;
+        }
+      }
+
+      function getInitialPlatform() {
+        const urlPlatform = getPlatformFromURL();
+        if (urlPlatform) return urlPlatform;
+
+        try {
+          const stored = (localStorage.getItem(STORAGE_KEY) || '').toLowerCase();
+          if (stored === 'android' || stored === 'ios') return stored;
+        } catch (e) {}
+
+        return DEFAULT_PLATFORM;
+      }
+
+      function setActiveButton(platform) {
+        document.querySelectorAll('.sl-platform-btn').forEach((btn) => {
+          const isActive = btn.getAttribute('data-platform') === platform;
+          btn.classList.toggle('is-active', isActive);
+          btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+      }
+
+      function swapImages(platform) {
+        document.querySelectorAll('img[data-ios][data-android]').forEach((img) => {
+          const nextSrc = img.getAttribute(platform === 'android' ? 'data-android' : 'data-ios');
+          if (nextSrc && img.getAttribute('src') !== nextSrc) {
+            img.setAttribute('src', nextSrc);
+          }
+        });
+      }
+
+      function applyPlatform(platform) {
+        setActiveButton(platform);
+        swapImages(platform);
+        try { localStorage.setItem(STORAGE_KEY, platform); } catch (e) {}
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        const initial = getInitialPlatform();
+        applyPlatform(initial);
+
+        document.querySelectorAll('.sl-platform-btn').forEach((btn) => {
+          btn.addEventListener('click', function () {
+            const platform = (btn.getAttribute('data-platform') || DEFAULT_PLATFORM).toLowerCase();
+            applyPlatform(platform);
+          });
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
