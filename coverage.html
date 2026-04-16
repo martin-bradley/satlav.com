@@ -127,16 +127,18 @@
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
         <h2>Coverage</h2>
-        <p>Sat Lav currently maps public toilets across the United Kingdom. The map below shows the relative concentration of mapped locations.</p>
-
+          <p>Sat Lav maps public toilets across the UK, Europe, and parts of the United States. The map below shows the relative concentration of mapped locations.</p>
         <div class="sl-map-wrap" aria-label="Sat Lav UK coverage density map">
           <div id="coverageMap"></div>
 
           <div class="sl-map-card" role="note" aria-label="Coverage legend">
-            <div class="sl-map-title">Coverage density</div>
-            <div class="sl-map-sub">Colours show clustering density, not individual pins or data quality.</div>
 
-            <div class="sl-map-legend" aria-label="Density key">
+          <div class="sl-map-title">Coverage density</div>
+          <div class="sl-map-sub">Colours show clustering density, not individual pins or data quality.</div>
+          <div id="ptCount" class="sl-map-foot">Loading coverage data…</div>
+
+          <div class="sl-map-legend" aria-label="Density key">
+
               <div class="sl-swatch low"></div><div>Low concentration</div>
               <div class="sl-swatch mid"></div><div>Moderate concentration</div>
               <div class="sl-swatch high"></div><div>High concentration</div>
@@ -183,51 +185,45 @@
   ></script>
   <script src="https://unpkg.com/leaflet.heat/dist/leaflet-heat.js"></script>
 
-  <script>
-fetch('assets/coverage_points.json')
-  .then(r => r.json())
-  .then(points => {
-    L.heatLayer(points, {
-      radius: 16,
-      blur: 20,
-      maxZoom: 11
-    }).addTo(map);
+ <script>
+  // Map init (wider view for UK + Europe + US coverage)
+  const isSmall = window.matchMedia('(max-width: 560px)').matches;
 
-    document.getElementById('ptCount').textContent =
-      'Mapped locations: ' + points.length.toLocaleString();
-  })
-  .catch(err => {
-    console.error(err);
-    document.getElementById('ptCount').textContent =
-      'Unable to load coverage data.';
-  });
-
-    // Map init (UK centre)
-    const isSmall = window.matchMedia('(max-width: 560px)').matches;
-
-    const map = L.map('coverageMap', {
+  const map = L.map('coverageMap', {
     zoomControl: !isSmall
-    }).setView([54.8, -2.5], 6);
+  }).setView([35, -15], 3);
 
-    if (isSmall) {
+  if (isSmall) {
     L.control.zoom({ position: 'bottomleft' }).addTo(map);
-    }
+  }
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 18,
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
 
-    // Calmer public settings (you can tweak later)
-    L.heatLayer(ALL_POINTS, {
-      radius: 16,
-      blur: 20,
-      maxZoom: 11
-    }).addTo(map);
+  fetch('assets/coverage_points.json')
+    .then(r => r.json())
+    .then(points => {
+      L.heatLayer(points, {
+        radius: 16,
+        blur: 20,
+        maxZoom: 11
+      }).addTo(map);
 
-    // Count label
-    document.getElementById('ptCount').textContent = 'Mapped locations: ' + ALL_POINTS.length.toLocaleString();
-  </script>
+      const ptCountEl = document.getElementById('ptCount');
+      if (ptCountEl) {
+        ptCountEl.textContent = 'Mapped locations: ' + points.length.toLocaleString();
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      const ptCountEl = document.getElementById('ptCount');
+      if (ptCountEl) {
+        ptCountEl.textContent = 'Unable to load coverage data.';
+      }
+    });
+</script>
 
 </body>
 </html>
