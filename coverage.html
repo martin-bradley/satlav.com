@@ -206,9 +206,9 @@
     .then(r => r.json())
     .then(points => {
       L.heatLayer(points, {
-        radius: 16,
-        blur: 20,
-        maxZoom: 11
+        radius: 10,
+        blur: 14,
+        maxZoom: 9
       }).addTo(map);
 
       const ptCountEl = document.getElementById('ptCount');
