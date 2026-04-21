@@ -2791,7 +2791,7 @@ input, select, textarea {
 		}
 
 			ul.actions.stacked li {
-				padding: 1.3rem 0 0 0;
+				padding: 0.7rem 0 0 0;
 			}
 
 				ul.actions.stacked li:first-child {
@@ -9081,8 +9081,8 @@ body, input, select, textarea {
 
 /* Reduce section spacing again */
 .sl-section {
-  padding-top: 0.85rem;
-  padding-bottom: 0.85rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 /* Tighten spacing below hero text block */
@@ -9092,8 +9092,8 @@ body, input, select, textarea {
 
 /* Slightly reduce gap between sections globally */
 .wrapper {
-  padding-top: 0.75rem !important;
-  padding-bottom: 0.75rem !important;
+  padding-top: 0.0rem !important;
+  padding-bottom: 0.0rem !important;
 }
 
 @media screen and (max-width: 736px) {
@@ -9346,4 +9346,39 @@ body, input, select, textarea {
     white-space: nowrap;
     flex: 0 0 auto;
   }
+}
+
+/* --- Sat Lav SEO pages spacing tighten --- */
+
+.sl-section {
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+.sl-section p {
+  margin: 0 0 1rem 0;
+}
+
+.sl-section h2 {
+  margin: 0 0 0.75rem 0;
+}
+
+.sl-section ul {
+  margin: 0 0 1rem 0;
+}
+
+.sl-section ul.actions.stacked li {
+  padding-top: 0.75rem;
+}
+
+.sl-section ul.actions.stacked li:first-child {
+  padding-top: 0;
+}
+
+.sl-footer-links {
+  margin: 0 0 0.6rem 0;
+}
+
+footer .copyright {
+  margin: 0;
 }
