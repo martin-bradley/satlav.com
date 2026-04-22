@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-  <title>London Public Toilets | Sat Lav</title>
+  <title>Edinburgh Public Toilets | Sat Lav</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="description" content="Find public toilets in London with Sat Lav, including map-based coverage and clear access information when known." />
-  <link rel="canonical" href="https://satlav.com/toilets/uk/london/" />
+  <meta name="description" content="Find public toilets in Edinburgh with Sat Lav, including map-based coverage and clear access information when known." />
+  <link rel="canonical" href="https://satlav.com/toilets/uk/edinburgh/" />
   <link rel="stylesheet" href="/assets/css/main.css" />
   <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 
@@ -53,6 +53,14 @@
     }
 
     #coverageMap { height: 100%; width: 100%; }
+
+    .leaflet-container img,
+    .leaflet-pane,
+    .leaflet-tile,
+    .leaflet-marker-icon,
+    .leaflet-marker-shadow {
+      max-width: none !important;
+    }
 
     .sl-map-card {
       position: absolute;
@@ -131,9 +139,9 @@
 
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
-        <h1>Public toilets in London</h1>
-        <p>Sat Lav helps you find public toilets across London without extra friction. Open the map, see what is nearby, and check the details that matter when they are known.</p>
-        
+        <h1>Public toilets in Edinburgh</h1>
+        <p>Sat Lav helps you find public toilets across Edinburgh without extra friction. Open the map, see what is nearby, and check the details that matter when they are known.</p>
+
         <p>
           For live locations, opening status, and accessibility details, use the app.
         </p>
@@ -141,24 +149,23 @@
         <p>
           <a href="/download.html">Download Sat Lav</a>
         </p>
-        
-        <p><a href="/toilets/">Back to all city pages</a></p>
 
+        <p><a href="/toilets/">Back to all city pages</a></p>
       </div>
     </section>
 
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
-        <h2>London coverage</h2>
-        <p>The map below is centred on London and shows the relative concentration of mapped public toilets in and around the city.</p>    
+        <h2>Edinburgh coverage</h2>
+        <p>The map below is centred on Edinburgh and shows the relative concentration of mapped public toilets in and around the city.</p>
 
-        <div class="sl-map-wrap" aria-label="Sat Lav London coverage map">
+        <div class="sl-map-wrap" aria-label="Sat Lav Edinburgh coverage map">
           <div id="coverageMap"></div>
 
           <div class="sl-map-card" role="note" aria-label="Coverage legend">
             <div class="sl-map-title">Coverage density</div>
-            <div class="sl-map-sub">Centred on London. Colours show clustering density, not individual pins or data quality.</div>
-            <div id="ptCount" class="sl-map-foot">Loading coverage data…</div>
+            <div class="sl-map-sub">Centred on Edinburgh. Colours show clustering density, not individual pins or data quality.</div>
+            <div id="ptCount" class="sl-map-foot">Coverage drawn from Sat Lav's wider mapped dataset.</div>
 
             <div class="sl-map-legend" aria-label="Density key">
               <div class="sl-swatch low"></div><div>Low concentration</div>
@@ -169,7 +176,7 @@
           </div>
         </div>
 
-        <p style="margin-top: 1.25rem; color: rgba(0,0,0,0.65); font-size: 0.95em;">London has dense central coverage, with more variation as you move further out. The app shows what is nearby and leaves unknown information as unknown.</p>
+        <p style="margin-top: 1.25rem; color: rgba(0,0,0,0.65); font-size: 0.95em;">Edinburgh coverage is strongest through the centre and the main visitor areas, with thinner spread further out. The app shows what is nearby and leaves unknown information as unknown.</p>
       </div>
     </section>
 
@@ -185,22 +192,22 @@
       </div>
     </section>
 
-<!-- Footer -->
-<footer class="wrapper style1 align-center">
-  <div class="inner">
-    <p class="sl-footer-links">
-      <a href="/privacy.html">Privacy</a> ·
-      <a href="/support.html">Support</a> ·
-      <a href="/data.html">Data</a> ·
-      <a href="/coverage.html">Coverage</a> ·
-      <a href="/toilets/">Toilets</a>
-    </p>
-    <p class="copyright">
-      &copy; Sat Lav. All rights reserved.
-      <span class="sl-muted">Contains data from ToiletMap UK (CC BY 4.0).</span>
-    </p>
-  </div>
-</footer>
+    <!-- Footer -->
+    <footer class="wrapper style1 align-center">
+      <div class="inner">
+        <p class="sl-footer-links">
+          <a href="/privacy.html">Privacy</a> ·
+          <a href="/support.html">Support</a> ·
+          <a href="/data.html">Data</a> ·
+          <a href="/coverage.html">Coverage</a> ·
+          <a href="/toilets/">Find toilets by location</a>
+        </p>
+        <p class="copyright">
+          &copy; Sat Lav. All rights reserved.
+          <span class="sl-muted">Contains data from ToiletMap UK (CC BY 4.0).</span>
+        </p>
+      </div>
+    </footer>
 
   </div>
 
@@ -224,7 +231,7 @@
 
     const map = L.map('coverageMap', {
       zoomControl: !isSmall
-    }).setView([51.5072, -0.1276], isSmall ? 9 : 10);
+    }).setView([55.9533, -3.1883], isSmall ? 10 : 11);
 
     if (isSmall) {
       L.control.zoom({ position: 'bottomleft' }).addTo(map);
@@ -243,11 +250,6 @@
           blur: 14,
           maxZoom: 9
         }).addTo(map);
-
-        const ptCountEl = document.getElementById('ptCount');
-        if (ptCountEl) {
-          ptCountEl.textContent = 'Data drawn from wider Sat Lav database';
-        }
       })
       .catch(err => {
         console.error(err);
