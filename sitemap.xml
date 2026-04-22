@@ -41,4 +41,24 @@
     <loc>https://satlav.com/toilets/france/paris/</loc>
   </url>
 
+    <url>
+    <loc>https://satlav.com/toilets/uk/edinburgh/</loc>
+  </url>
+
+  <url>
+    <loc>https://satlav.com/toilets/uk/birmingham/</loc>
+  </url>
+
+  <url>
+    <loc>https://satlav.com/toilets/uk/liverpool/</loc>
+  </url>
+
+  <url>
+    <loc>https://satlav.com/toilets/france/lyon/</loc>
+  </url>
+
+  <url>
+    <loc>https://satlav.com/toilets/france/marseille/</loc>
+  </url>
+
 </urlset>
