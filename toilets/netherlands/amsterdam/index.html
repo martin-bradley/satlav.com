@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html>
 <head>
-  <title>Public Toilets in Marseille | Sat Lav</title>
+  <title>Public Toilets in Amsterdam | Sat Lav</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="description" content="Find public toilets in Marseille with Sat Lav, including map-based coverage and clear access information when known." />
-  <link rel="canonical" href="https://satlav.com/toilets/france/marseille/" />
+  <meta name="description" content="Find public toilets in Amsterdam with Sat Lav, including map-based coverage and clear access information when known." />
+  <link rel="canonical" href="https://satlav.com/toilets/netherlands/amsterdam/" />
   <link rel="stylesheet" href="/assets/css/main.css" />
   <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 
@@ -18,105 +18,24 @@
 
   <style>
     @media (max-width: 560px) {
-      .sl-map-card {
-        top: 12px;
-        right: 12px;
-        left: 12px;
-        max-width: none;
-        padding: 10px 12px;
-      }
-
-      .sl-map-sub {
-        margin-bottom: 8px;
-      }
-
-      .sl-map-legend {
-        gap: 6px 8px;
-        font-size: 12px;
-      }
-
-      .sl-map-foot {
-        margin-top: 8px;
-      }
+      .sl-map-card { top: 12px; right: 12px; left: 12px; max-width: none; padding: 10px 12px; }
+      .sl-map-sub { margin-bottom: 8px; }
+      .sl-map-legend { gap: 6px 8px; font-size: 12px; }
+      .sl-map-foot { margin-top: 8px; }
     }
 
-    .sl-map-wrap {
-      position: relative;
-      width: 100%;
-      height: 70vh;
-      min-height: 520px;
-      border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(0,0,0,0.10);
-      box-shadow: 0 10px 26px rgba(0,0,0,0.08);
-      background: rgba(0,0,0,0.02);
-    }
-
+    .sl-map-wrap { position: relative; width: 100%; height: 70vh; min-height: 520px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(0,0,0,0.10); box-shadow: 0 10px 26px rgba(0,0,0,0.08); background: rgba(0,0,0,0.02); }
     #coverageMap { height: 100%; width: 100%; }
-
-    .leaflet-container img,
-    .leaflet-pane,
-    .leaflet-tile,
-    .leaflet-marker-icon,
-    .leaflet-marker-shadow {
-      max-width: none !important;
-    }
-
-    .sl-map-card {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      z-index: 9999;
-      background: rgba(255,255,255,0.88);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(0,0,0,0.08);
-      border-radius: 14px;
-      padding: 12px 14px;
-      font-family: -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-      box-shadow: 0 10px 26px rgba(0,0,0,0.10);
-      line-height: 1.35;
-      max-width: 340px;
-    }
-
-    .sl-map-title {
-      font-size: 14px;
-      font-weight: 600;
-      margin: 0 0 6px 0;
-    }
-
-    .sl-map-sub {
-      font-size: 12px;
-      color: rgba(0,0,0,0.68);
-      margin: 0 0 10px 0;
-    }
-
-    .sl-map-legend {
-      display: grid;
-      grid-template-columns: 12px 1fr;
-      gap: 8px 10px;
-      align-items: center;
-      font-size: 12px;
-      color: rgba(0,0,0,0.78);
-    }
-
-    .sl-swatch {
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(0,0,0,0.12);
-    }
-
+    .sl-map-card { position: absolute; top: 16px; right: 16px; z-index: 9999; background: rgba(255,255,255,0.88); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(0,0,0,0.08); border-radius: 14px; padding: 12px 14px; font-family: -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif; box-shadow: 0 10px 26px rgba(0,0,0,0.10); line-height: 1.35; max-width: 340px; }
+    .sl-map-title { font-size: 14px; font-weight: 600; margin: 0 0 6px 0; }
+    .sl-map-sub { font-size: 12px; color: rgba(0,0,0,0.68); margin: 0 0 10px 0; }
+    .sl-map-legend { display: grid; grid-template-columns: 12px 1fr; gap: 8px 10px; align-items: center; font-size: 12px; color: rgba(0,0,0,0.78); }
+    .sl-swatch { width: 12px; height: 12px; border-radius: 999px; border: 1px solid rgba(0,0,0,0.12); }
     .sl-swatch.low { background: #4c6fff; }
     .sl-swatch.mid { background: #34c759; }
     .sl-swatch.high { background: #ffd60a; }
     .sl-swatch.vhigh { background: #ff3b30; }
-
-    .sl-map-foot {
-      margin-top: 10px;
-      font-size: 12px;
-      color: rgba(0,0,0,0.60);
-    }
+    .sl-map-foot { margin-top: 10px; font-size: 12px; color: rgba(0,0,0,0.60); }
   </style>
 </head>
 <body class="is-preload">
@@ -139,8 +58,8 @@
 
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
-        <h1>Public toilets in Marseille</h1>
-        <p>Sat Lav helps you find public toilets across Marseille without extra friction. Open the map, see what is nearby, and check the details that matter when they are known.</p>
+        <h1>Public toilets in Amsterdam</h1>
+        <p>Sat Lav helps you find public toilets across Amsterdam, including central Amsterdam and surrounding areas. Open the map, see what is nearby, and check the details that matter when they are known.</p>
 
         <p>
           For live locations, opening status, and accessibility details, use the app.
@@ -151,26 +70,27 @@
         </p>
 
         <p>
-  Looking for toilets nearby?
-  <a href="/toilets/near-me/">Use Sat Lav to find public toilets near you</a>.
-</p>
+          Looking for toilets nearby?
+          <a href="/toilets/near-me/">Use Sat Lav to find public toilets near you</a>.
+        </p>
 
         <p><a href="/toilets/">Back to all city pages</a></p>
+
       </div>
     </section>
 
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
-        <h2>Marseille coverage</h2>
-        <p>The map below is centred on Marseille and shows the relative concentration of mapped public toilets in and around the city.</p>
+        <h2>Amsterdam coverage</h2>
+        <p>The map below is centred on Amsterdam and shows the relative concentration of mapped public toilets in the city and surrounding areas.</p>    
 
-        <div class="sl-map-wrap" aria-label="Sat Lav Marseille coverage map">
+        <div class="sl-map-wrap" aria-label="Sat Lav Amsterdam coverage map">
           <div id="coverageMap"></div>
 
           <div class="sl-map-card" role="note" aria-label="Coverage legend">
             <div class="sl-map-title">Coverage density</div>
-            <div class="sl-map-sub">Centred on Marseille. Colours show clustering density, not individual pins or data quality.</div>
-            <div id="ptCount" class="sl-map-foot">Coverage drawn from Sat Lav's wider mapped dataset.</div>
+            <div class="sl-map-sub">Centred on Amsterdam. Colours show clustering density, not individual pins or data quality.</div>
+            <div id="ptCount" class="sl-map-foot">Loading coverage data…</div>
 
             <div class="sl-map-legend" aria-label="Density key">
               <div class="sl-swatch low"></div><div>Low concentration</div>
@@ -181,7 +101,7 @@
           </div>
         </div>
 
-        <p style="margin-top: 1.25rem; color: rgba(0,0,0,0.65); font-size: 0.95em;">Marseille coverage is strongest through the centre and main urban corridors, with more variation beyond them. The app shows what is nearby and leaves unknown information as unknown.</p>
+        <p style="margin-top: 1.25rem; color: rgba(0,0,0,0.65); font-size: 0.95em;">Amsterdam coverage is strongest through central areas, with more variation as you move further out. The app shows what is nearby and leaves unknown information as unknown.</p>
       </div>
     </section>
 
@@ -197,22 +117,22 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="wrapper style1 align-center">
-      <div class="inner">
-        <p class="sl-footer-links">
-          <a href="/privacy.html">Privacy</a> ·
-          <a href="/support.html">Support</a> ·
-          <a href="/data.html">Data</a> ·
-          <a href="/coverage.html">Coverage</a> ·
-          <a href="/toilets/">Toilets</a>
-        </p>
-        <p class="copyright">
-          &copy; Sat Lav. All rights reserved.
-          <span class="sl-muted">Contains data from ToiletMap UK (CC BY 4.0).</span>
-        </p>
-      </div>
-    </footer>
+<!-- Footer -->
+<footer class="wrapper style1 align-center">
+  <div class="inner">
+    <p class="sl-footer-links">
+      <a href="/privacy.html">Privacy</a> ·
+      <a href="/support.html">Support</a> ·
+      <a href="/data.html">Data</a> ·
+      <a href="/coverage.html">Coverage</a> ·
+      <a href="/toilets/">Toilets</a>
+    </p>
+    <p class="copyright">
+      &copy; Sat Lav. All rights reserved.
+      <span class="sl-muted">Contains data from ToiletMap UK (CC BY 4.0).</span>
+    </p>
+  </div>
+</footer>
 
   </div>
 
@@ -236,7 +156,7 @@
 
     const map = L.map('coverageMap', {
       zoomControl: !isSmall
-    }).setView([43.2965, 5.3698], isSmall ? 10 : 11);
+    }).setView([52.3676, 4.9041], isSmall ? 10 : 11);
 
     if (isSmall) {
       L.control.zoom({ position: 'bottomleft' }).addTo(map);
@@ -255,6 +175,11 @@
           blur: 14,
           maxZoom: 9
         }).addTo(map);
+
+        const ptCountEl = document.getElementById('ptCount');
+        if (ptCountEl) {
+          ptCountEl.textContent = 'Data drawn from wider Sat Lav database';
+        }
       })
       .catch(err => {
         console.error(err);
