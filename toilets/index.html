@@ -1,11 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Public Toilet Finder by City | Sat Lav</title>
+  <title>Public Toilet Finder Near You and by City | Sat Lav</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="description" content="Browse Sat Lav toilet finder pages by city, including London, Manchester, and Paris." />
-  <link rel="canonical" href="https://satlav.com/toilets/" />
+  <meta name="description" content="Find public toilets near you or browse by city with Sat Lav. See nearby toilets, walking distance, and access details when known." />  <link rel="canonical" href="https://satlav.com/toilets/" />
   <link rel="stylesheet" href="/assets/css/main.css" />
   <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 </head>
@@ -30,11 +29,13 @@
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
         <h1>Public toilet finder by city</h1>
-<p>Sat Lav helps you find public toilets by location or nearby when you need them. Browse city coverage or use the app to see what’s closest.</p>     
+<p>Sat Lav helps you find public toilets near you or by city when you need them. Browse city coverage or use the app to see what is closest, with details that matter.</p>
 <p>
   Looking for the closest toilet right now?
   <a href="/toilets/near-me/">Find public toilets near you</a>.
 </p>
+
+<p>You can browse public toilet coverage in major cities below, or use the app to find nearby toilets based on your location.</p>
 
 </div>
     </section>
@@ -42,46 +43,42 @@
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
         <h2>United Kingdom</h2>
-        <ul class="actions stacked">
-          <li><a href="/toilets/uk/london/" class="button">London public toilets</a></li>
-          <li><a href="/toilets/uk/manchester/" class="button">Manchester public toilets</a></li>
-          <li><a href="/toilets/uk/edinburgh/" class="button">Edinburgh public toilets</a></li>
-          <li><a href="/toilets/uk/liverpool/" class="button">Liverpool public toilets</a></li>
-          <li><a href="/toilets/uk/birmingham/" class="button">Birmingham public toilets</a></li>
-          <li><a href="/toilets/uk/bristol/" class="button">Bristol public toilets</a></li>
-          <li><a href="/toilets/uk/glasgow/" class="button">Glasgow public toilets</a></li>
-
-
-        </ul>
+          <ul class="actions stacked">
+            <li><a href="/toilets/uk/london/" class="button">London</a></li>
+            <li><a href="/toilets/uk/manchester/" class="button">Manchester</a></li>
+            <li><a href="/toilets/uk/edinburgh/" class="button">Edinburgh</a></li>
+            <li><a href="/toilets/uk/liverpool/" class="button">Liverpool</a></li>
+            <li><a href="/toilets/uk/birmingham/" class="button">Birmingham</a></li>
+            <li><a href="/toilets/uk/bristol/" class="button">Bristol</a></li>
+            <li><a href="/toilets/uk/glasgow/" class="button">Glasgow</a></li>
+          </ul>
       </div>
     </section>
 
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
         <h2>France</h2>
-        <ul class="actions stacked">
-          <li><a href="/toilets/france/paris/" class="button">Paris public toilets</a></li>
-          <li><a href="/toilets/france/lyon/" class="button">Lyon public toilets</a></li>
-          <li><a href="/toilets/france/marseille/" class="button">Marseille public toilets</a></li>
-
-        </ul>
+          <ul class="actions stacked">
+            <li><a href="/toilets/france/paris/" class="button">Paris</a></li>
+            <li><a href="/toilets/france/lyon/" class="button">Lyon</a></li>
+            <li><a href="/toilets/france/marseille/" class="button">Marseille</a></li>
+          </ul>
       </div>
     </section>
 
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
         <h2>Netherlands</h2>
-        <ul class="actions stacked">
-          <li><a href="/toilets/netherlands/amsterdam/" class="button">Amsterdam public toilets</a></li>
-
-
-        </ul>
+          <ul class="actions stacked">
+            <li><a href="/toilets/netherlands/amsterdam/" class="button">Amsterdam</a></li>
+          </ul>
       </div>
     </section>
 
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
         <h2>How Sat Lav works</h2>
+        <p>Sat Lav focuses on making public toilet information easy to use, especially when you need it quickly. It shows nearby locations, highlights what is known, and avoids guessing when information is incomplete.</p>
         <ul class="sl-bullets sl-bullets-clean">
           <li>Shows nearby public toilets on a live map</li>
           <li>Displays walking distance and estimated time</li>
@@ -117,6 +114,27 @@
   <script src="/assets/js/breakpoints.min.js"></script>
   <script src="/assets/js/util.js"></script>
   <script src="/assets/js/main.js"></script>
+
+  <script>
+  document.querySelectorAll('.actions a.button').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    // Extract city from URL (last non-empty segment)
+    const parts = href.split('/').filter(Boolean);
+    const citySlug = parts[parts.length - 1];
+
+    if (!citySlug) return;
+
+    // Convert slug to Title Case (e.g. "new-york" → "New York")
+    const cityName = citySlug
+      .split('-')
+      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ');
+
+    link.textContent = `Public toilets in ${cityName}`;
+  });
+</script>
 
 </body>
 </html>
