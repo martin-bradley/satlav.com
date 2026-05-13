@@ -77,4 +77,15 @@
   <loc>https://satlav.com/toilets/near-me/</loc>
   </url>
 
+  <url>
+  <loc>https://satlav.com/toilets/uk/</loc>
+  </url>
+  <url>
+    <loc>https://satlav.com/toilets/france/</loc>
+  </url>
+  <url>
+    <loc>https://satlav.com/toilets/netherlands/</loc>
+  </url>
+
+
 </urlset>
