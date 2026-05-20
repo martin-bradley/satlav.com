@@ -9308,6 +9308,13 @@ body, input, select, textarea {
   }
 }
 
+/* --- Sat Lav mobile hero logo optical centring --- */
+@media screen and (max-width: 736px) {
+  .sl-hero-mark img {
+    transform: translateX(6px);
+  }
+}
+
 
 /* --- Sat Lav final polish: link wrapping + muted link style --- */
 .sl-page a {
