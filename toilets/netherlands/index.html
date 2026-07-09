@@ -1,13 +1,112 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>Public Toilets in the Netherlands | Sat Lav</title>
+  <title>Public Toilets in the Netherlands: Visitor Guide | Sat Lav</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="description" content="Find public toilets in the Netherlands with Sat Lav. Browse Amsterdam coverage or use the app to find nearby toilets and access details when known." />
+  <meta name="description" content="A practical visitor guide to public toilets in the Netherlands, including paid toilets, cafés, railway stations, accessibility, opening hours and how to find nearby toilets with Sat Lav." />
   <link rel="canonical" href="https://satlav.com/toilets/netherlands/" />
   <link rel="stylesheet" href="/assets/css/main.css" />
   <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+
+  <style>
+    .sl-guide-nav {
+      margin-top: 1.25rem;
+    }
+
+    .sl-guide-nav-label {
+      display: block;
+      margin-bottom: 0.65rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .sl-guide-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .sl-guide-pills a {
+      display: inline-block;
+      padding: 0.38rem 0.75rem;
+      border: 1px solid rgba(0, 0, 0, 0.18);
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.78rem;
+      line-height: 1.2;
+      white-space: nowrap;
+    }
+
+    .sl-guide-pills a:hover {
+      border-color: rgba(0, 0, 0, 0.38);
+    }
+
+    .sl-city-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.75rem;
+      max-width: 36rem;
+      padding: 0;
+      margin: 1.25rem 0 0 0;
+      list-style: none;
+    }
+
+    .sl-city-grid .button {
+      width: 100%;
+      text-align: center;
+    }
+
+    .sl-faq {
+      margin-top: 1.25rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .sl-faq details {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      padding: 0.85rem 0;
+    }
+
+    .sl-faq summary {
+      cursor: pointer;
+      font-weight: 600;
+      list-style-position: outside;
+    }
+
+    .sl-faq details > div {
+      margin: 0.75rem 0 0.2rem 1.35rem;
+      padding-left: 1rem;
+      border-left: 2px solid rgba(0, 0, 0, 0.16);
+    }
+
+    .sl-faq details > div p:last-child {
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: 736px) {
+      .sl-guide-pills {
+        gap: 0.45rem;
+      }
+
+      .sl-guide-pills a {
+        font-size: 0.72rem;
+        padding: 0.34rem 0.62rem;
+      }
+
+      .sl-city-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.6rem;
+      }
+
+      .sl-city-grid .button {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+    }
+  </style>
 
   <script type="application/ld+json">
   {
@@ -25,6 +124,63 @@
         "position": 2,
         "name": "Netherlands",
         "item": "https://satlav.com/toilets/netherlands/"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are public toilets free in the Netherlands?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Some public toilets in the Netherlands are free, but paid toilets are common in railway stations, shopping areas, tourist locations and privately managed facilities. Charges are usually modest."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do some toilets charge in the Netherlands?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Paid toilets are often privately managed or maintained by transport hubs, shopping centres or service operators. The charge usually helps cover cleaning, staffing and maintenance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use toilets in Dutch cafés and restaurants?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Usually yes if you are a customer. Some cafés, bars and restaurants may allow non-customers to use their toilets, but this varies, and it is polite to ask first."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need cash for public toilets in the Netherlands?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Contactless payment is increasingly common, but it can still be useful to carry a small amount of change when travelling, especially in older facilities or smaller places."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are toilets available at Dutch railway stations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many larger railway stations in the Netherlands have toilets. Availability, charges and opening hours vary, and some smaller stations may not have public toilets."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if a toilet is closed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Opening hours can vary, and toilets may close temporarily for cleaning, maintenance or local reasons. Sat Lav displays known opening information and allows community reports where supported."
+        }
       }
     ]
   }
@@ -48,48 +204,168 @@
 
   <div id="wrapper" class="divided">
 
-    <section class="wrapper style1 align-left sl-section">
+    <section id="overview" class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
-        <h1>Public toilets in the Netherlands</h1>
-        <p>Sat Lav helps you find public toilets in the Netherlands using a simple map-first view. It is built for quick decisions while walking, travelling or exploring unfamiliar places.</p>
-        <p>The app shows nearby mapped toilets with walking distance, estimated time, accessibility details, charges and opening status where available.</p>
+        <h1>Public toilets in the Netherlands: a visitor guide</h1>
+        <p>Whether you are exploring Amsterdam, cycling through smaller towns or travelling across the Netherlands by train, finding a public toilet is usually straightforward once you know where to look. Availability varies between city centres, transport hubs, shopping areas and tourist attractions.</p>
+        <p>Sat Lav helps you find nearby mapped toilets across the Netherlands, with walking distance, estimated time, accessibility details, charges and opening status where available.</p>
         <p>
           Looking for the closest toilet right now?
           <a href="/toilets/near-me/">Find public toilets near you</a>.
         </p>
         <p>
-          <a href="/download.html">Download Sat Lav</a>
+          <a href="/download.html">Download Sat Lav for iPhone and Android</a>
         </p>
+
+        <nav class="sl-guide-nav" aria-label="On this page">
+          <span class="sl-guide-nav-label">On this page</span>
+          <ul class="sl-guide-pills">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#free-or-paid">Free or paid?</a></li>
+            <li><a href="#where-to-find-toilets">Where to find toilets</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#city-guides">City guides</a></li>
+            <li><a href="#data">Data</a></li>
+          </ul>
+        </nav>
       </div>
     </section>
 
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
-        <h2>Browse Netherlands city coverage</h2>
-        <p>Start with Amsterdam coverage below, or use the app for live nearby results based on your current location.</p>
-        <ul class="actions stacked">
-          <li><a href="/toilets/netherlands/amsterdam/" class="button">Public toilets in Amsterdam</a></li>
-        </ul>
+        <h2>What visitors to the Netherlands should know</h2>
+
+        <h3 id="free-or-paid">Are public toilets free?</h3>
+        <p>Some public toilets in the Netherlands are free to use, but paid toilets are common, particularly in railway stations, shopping areas, tourist locations and privately managed facilities.</p>
+        <p>Charges are usually modest. Contactless payment is increasingly common, although carrying a bank card and a small amount of change can still be useful when travelling.</p>
+
+        <h3 id="where-to-find-toilets">Where can you usually find toilets?</h3>
+        <p>Public toilets in the Netherlands are often found in city centres, railway stations, shopping centres, museums, libraries, service areas, parks and major tourist attractions.</p>
+        <p>Cafés, bars and restaurants usually have toilets for customers. Some businesses may allow non-customers to use them, but this varies, and it is polite to ask first.</p>
+
+        <h3 id="accessibility">Accessibility</h3>
+        <p>Accessibility varies. Newer public toilets, larger venues, museums, shopping centres and transport hubs are more likely to provide accessible facilities, while older buildings and smaller cafés may be more limited.</p>
+        <p>Sat Lav shows accessibility information where it is known. Unknown details are left as unknown rather than guessed.</p>
+
+        <h3>Baby-changing and family facilities</h3>
+        <p>Baby-changing facilities are common in larger shopping centres, department stores, museums, family attractions and motorway service areas. Smaller public toilets, cafés and older buildings may not always provide them.</p>
+
+        <h3>Opening hours</h3>
+        <p>Opening hours vary widely. Toilets inside buildings usually follow the opening hours of that building, while standalone facilities, stations and service areas may have separate opening times. Some toilets may also close temporarily for cleaning or maintenance.</p>
       </div>
     </section>
 
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
-        <h2>Useful on foot and on the move</h2>
-        <p>Static pages can show where Sat Lav has coverage, but the app is where the information becomes useful: nearby toilets, distance, access details and updates in one place.</p>
+        <h2>Practical tips</h2>
         <ul class="sl-bullets sl-bullets-clean">
-          <li>Find mapped public toilets nearby</li>
-          <li>Check walking distance and estimated time</li>
-          <li>See access details when they are known</li>
-          <li>Help improve the map by adding or updating locations</li>
+          <li>Expect many public toilets to charge a small fee, especially at stations and tourist locations.</li>
+          <li>Carry a bank card or contactless payment method; a small amount of change can still be useful.</li>
+          <li>Railway stations usually have toilets, but they may charge for entry.</li>
+          <li>Department stores, museums and larger shopping centres are often useful places to look.</li>
+          <li>Cafés and restaurants usually reserve toilets for customers.</li>
+          <li>If one toilet is unavailable, nearby alternatives are often close by in larger cities.</li>
+          <li>Opening information is not always published, so it is sensible to check more than one nearby option when possible.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq" class="wrapper style1 align-left sl-section">
+      <div class="inner sl-narrow">
+        <h2>Common questions</h2>
+
+        <div class="sl-faq">
+          <details>
+            <summary>Are public toilets free in the Netherlands?</summary>
+            <div>
+              <p>Some are free, but paid toilets are common in railway stations, shopping areas, tourist locations and privately managed facilities. Charges are usually modest.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Why do some toilets charge?</summary>
+            <div>
+              <p>Paid toilets are often privately managed or maintained by transport hubs, shopping centres or service operators. The charge usually helps cover cleaning, staffing and maintenance.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Can I use toilets in cafés and restaurants?</summary>
+            <div>
+              <p>Usually yes if you are a customer. Some cafés, bars and restaurants allow non-customers to use their toilets, but this varies. If in doubt, it is polite to ask first.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Do I need cash?</summary>
+            <div>
+              <p>Contactless payment is increasingly common, but it can still be useful to carry a small amount of change when travelling, especially in older facilities or smaller places.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>Are there toilets at Dutch railway stations?</summary>
+            <div>
+              <p>Many larger railway stations have toilets, although availability, charges and opening hours vary. Smaller stations may not have public toilets.</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>What if a toilet is closed?</summary>
+            <div>
+              <p>Opening hours can vary, and toilets may close temporarily for cleaning, maintenance or local reasons. Sat Lav displays known opening information and allows the community to report problems where supported.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="city-guides" class="wrapper style1 align-left sl-section">
+      <div class="inner sl-narrow">
+        <h2>Browse by city</h2>
+        <p>Planning ahead? Browse public toilet guides for some of the Netherlands' most visited cities, or use the app for live nearby results based on your current location.</p>
+        <ul class="sl-city-grid">
+          <li><a href="/toilets/netherlands/amsterdam/" class="button">Amsterdam</a></li>
         </ul>
       </div>
     </section>
 
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
-        <h2>Netherlands toilet data</h2>
-        <p>Sat Lav uses open data and app updates to make public toilet information easier to use. Unknown details remain unknown rather than being filled in by guesswork.</p>
+        <h2>Built for quick decisions</h2>
+        <p>Sat Lav is designed for the moment you actually need the information: where the toilet is, how far away it is, and what is known about access.</p>
+        <ul class="sl-bullets sl-bullets-clean">
+          <li>Nearby public toilets on a live map</li>
+          <li>Walking distance and estimated time</li>
+          <li>Accessibility and baby-changing details when known</li>
+          <li>Charges and opening status where available</li>
+          <li>Recent community verification where available</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrapper style1 align-left sl-section">
+      <div class="inner sl-narrow">
+        <h2>Netherlands coverage at a glance</h2>
+        <p>Sat Lav maps public toilets across the Netherlands, including major cities, transport hubs, tourist areas and smaller communities where reliable toilet information can be harder to find.</p>
+        <p>Where information is available, the app can display:</p>
+        <ul class="sl-bullets sl-bullets-clean">
+          <li>Accessibility information</li>
+          <li>Baby-changing details</li>
+          <li>Charges and opening status</li>
+          <li>Recent community verification</li>
+        </ul>
+        <p><a href="/download.html">Download Sat Lav</a> to find nearby toilets using your current location.</p>
+      </div>
+    </section>
+
+    <section id="data" class="wrapper style1 align-left sl-section">
+      <div class="inner sl-narrow">
+        <h2>Where Sat Lav gets its information</h2>
+        <p>Sat Lav combines public toilet data from open sources with updates and verification from people using the app.</p>
+        <p>Public toilet data is often incomplete or inconsistent, so Sat Lav avoids guessing. If opening hours, charges, accessibility details or baby-changing facilities are not known, they are shown as unknown rather than assumed.</p>
+        <p>Information changes over time. Opening hours, charges and access arrangements can change without notice, and community reports help improve the map where supported.</p>
         <p><a href="/coverage.html">View Sat Lav coverage</a> or <a href="/data.html">read more about the data</a>.</p>
       </div>
     </section>

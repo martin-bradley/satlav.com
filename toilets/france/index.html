@@ -1,31 +1,56 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-  <title>Public Toilets in France | Sat Lav</title>
+  <title>Public Toilets in France: A Visitor Guide | Sat Lav</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <meta name="description" content="Find public toilets in France with Sat Lav. Browse Paris, Lyon and Marseille, or use the app to find nearby toilets and access details when known." />
+  <meta name="description" content="A practical guide to public toilets in France, including free and paid toilets, Paris sanisettes, cafés, motorway service areas, accessibility and how to find nearby toilets with Sat Lav." />
   <link rel="canonical" href="https://satlav.com/toilets/france/" />
   <link rel="stylesheet" href="/assets/css/main.css" />
   <noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+
+  <style>
+    .sl-guide-nav { margin-top: 1.25rem; }
+    .sl-guide-nav-title { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .sl-guide-pills { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0; padding: 0; list-style: none; }
+    .sl-guide-pills a { border: solid 1px rgba(0,0,0,0.18); border-radius: 999px; display: inline-block; font-size: 0.76rem; line-height: 1; padding: 0.55rem 0.8rem; text-decoration: none; white-space: nowrap; }
+    .sl-city-grid { display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-top: 1.25rem; max-width: 560px; }
+    .sl-city-grid .button { width: 100%; min-width: 0; padding-left: 1rem; padding-right: 1rem; }
+    .sl-faq { margin-top: 1.5rem; max-width: 920px; }
+    .sl-faq details { border-top: solid 1px rgba(0,0,0,0.12); padding: 0.9rem 0; }
+    .sl-faq details:last-child { border-bottom: solid 1px rgba(0,0,0,0.12); }
+    .sl-faq summary { cursor: pointer; font-weight: 700; list-style-position: outside; }
+    .sl-faq-answer { border-left: solid 3px rgba(0,0,0,0.14); margin-top: 0.8rem; padding: 0.15rem 0 0.15rem 1rem; }
+    .sl-faq-answer p:last-child { margin-bottom: 0; }
+    @media screen and (max-width: 736px) {
+      .sl-guide-pills { gap: 0.4rem; }
+      .sl-guide-pills a { font-size: 0.72rem; padding: 0.5rem 0.68rem; }
+      .sl-city-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .sl-city-grid .button { font-size: 0.66rem; letter-spacing: 0.08rem; }
+    }
+  </style>
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Toilets",
-        "item": "https://satlav.com/toilets/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "France",
-        "item": "https://satlav.com/toilets/france/"
-      }
+      { "@type": "ListItem", "position": 1, "name": "Toilets", "item": "https://satlav.com/toilets/" },
+      { "@type": "ListItem", "position": 2, "name": "France", "item": "https://satlav.com/toilets/france/" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Are public toilets free in France?", "acceptedAnswer": { "@type": "Answer", "text": "It depends where you are. Many public toilets are free, including Paris sanisettes. Some toilets in tourist areas, stations, motorway service areas or privately managed locations may charge a small fee." } },
+      { "@type": "Question", "name": "Can I use toilets in cafés and restaurants in France?", "acceptedAnswer": { "@type": "Answer", "text": "Usually yes if you are a customer. Some cafés and restaurants may allow non-customers to use their toilets, but this varies and it is polite to ask first." } },
+      { "@type": "Question", "name": "What are Paris sanisettes?", "acceptedAnswer": { "@type": "Answer", "text": "Sanisettes are automated public toilets found around Paris. They are free to use and self-cleaning, but may close briefly while the cleaning cycle runs." } },
+      { "@type": "Question", "name": "Are toilets available on French motorways?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. French motorway service areas and many rest areas provide toilets. Facilities vary, especially between larger staffed service areas and smaller rest areas." } },
+      { "@type": "Question", "name": "What if a toilet is closed?", "acceptedAnswer": { "@type": "Answer", "text": "Opening hours can vary, and some toilets may close temporarily for cleaning, maintenance or local reasons. Sat Lav displays known opening information and allows the community to report problems where supported." } }
     ]
   }
   </script>
@@ -48,68 +73,136 @@
 
   <div id="wrapper" class="divided">
 
-    <section class="wrapper style1 align-left sl-section">
+    <section class="wrapper style1 align-left sl-section" id="overview">
       <div class="inner sl-narrow">
-        <h1>Public toilets in France</h1>
-        <p>Sat Lav helps you find public toilets in France with a simple map-first approach. It is useful for city breaks, longer journeys and the moments when you need to find something nearby quickly.</p>
-        <p>The app shows mapped toilets with walking distance, estimated time, accessibility details, baby-changing information, charges and opening status where available.</p>
-        <p>
-          Looking for the closest toilet right now?
-          <a href="/toilets/near-me/">Find public toilets near you</a>.
-        </p>
-        <p>
-          <a href="/download.html">Download Sat Lav</a>
-        </p>
+        <h1>Public toilets in France: a visitor guide</h1>
+        <p>Whether you are visiting France for a city break, travelling between towns or driving across the country, public toilet availability can vary by place, time of day and who manages the facilities.</p>
+        <p>Sat Lav helps you find nearby mapped toilets across France, with walking distance, estimated time, accessibility details, baby-changing information, charges and opening status where available.</p>
+        <p>Looking for the closest toilet right now? <a href="/toilets/near-me/">Find public toilets near you</a>.</p>
+        <p><a href="/download.html">Download Sat Lav for iPhone and Android</a></p>
+
+        <nav class="sl-guide-nav" aria-label="Guide sections">
+          <span class="sl-guide-nav-title">On this page</span>
+          <ul class="sl-guide-pills">
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#free-or-paid">Free or paid?</a></li>
+            <li><a href="#where-to-find">Where to find toilets</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#cities">City guides</a></li>
+            <li><a href="#data">Data</a></li>
+          </ul>
+        </nav>
       </div>
     </section>
 
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
-        <h2>Browse France city coverage</h2>
-        <p>Start with one of the city pages below, or use the app for live nearby results based on your current location.</p>
-        <ul class="actions stacked">
-          <li><a href="/toilets/france/paris/" class="button">Public toilets in Paris</a></li>
-          <li><a href="/toilets/france/lyon/" class="button">Public toilets in Lyon</a></li>
-          <li><a href="/toilets/france/marseille/" class="button">Public toilets in Marseille</a></li>
-        </ul>
+        <h2>What visitors to France should know</h2>
+
+        <h3 id="free-or-paid">Are public toilets free?</h3>
+        <p>Some public toilets in France are free to use, especially in larger cities, parks, shopping centres and civic spaces. Paris is a good example: the city has hundreds of public <em>sanisettes</em>, many of which are free automatic toilets.</p>
+        <p>Charges are still worth expecting in some places, particularly in busy tourist areas, privately managed toilets, some transport hubs and facilities with attendants. A contactless card or a small amount of change can still be useful when travelling.</p>
+
+        <h3 id="where-to-find">Where can you usually find toilets?</h3>
+        <p>Public toilets in France are often found in town and city centres, railway stations, parks, shopping centres, museums, galleries, motorway service areas and major tourist attractions.</p>
+        <p>Cafés, bars and restaurants usually have toilets for customers. Some businesses may allow non-customers to use them, but this varies, and it is polite to ask first.</p>
+
+        <h3 id="accessibility">Accessibility</h3>
+        <p>Accessibility varies. Many modern public toilets and larger venues provide accessible facilities, but older buildings, smaller cafés and some public facilities may be more limited.</p>
+        <p>In Paris, many sanisettes are designed to be accessible, but access, space and reliability can still vary in practice. Sat Lav shows accessibility information where it is known. Unknown details are left as unknown rather than guessed.</p>
+
+        <h3>Baby-changing and family facilities</h3>
+        <p>Baby-changing facilities are common in larger shopping centres, department stores, museums, family attractions and motorway service areas. Smaller public toilets, cafés and older buildings may not always provide them.</p>
+
+        <h3>Opening hours</h3>
+        <p>Opening hours vary widely. Toilets inside buildings usually follow the opening hours of that building, while standalone public toilets may close in the evening or during cleaning. Automated toilets may also be temporarily unavailable while a cleaning cycle runs.</p>
       </div>
     </section>
 
-    <section class="wrapper style1 align-left sl-section">
+    <section class="wrapper style1 align-left sl-section" id="tips">
       <div class="inner sl-narrow">
-        <h2>For visitors and local journeys</h2>
-        <p>France coverage is most useful when combined with the live app: nearby toilets, distance, access information and updates are easier to judge on the map than from a static list.</p>
+        <h2>Practical tips</h2>
         <ul class="sl-bullets sl-bullets-clean">
-          <li>Find nearby mapped toilets while travelling</li>
-          <li>Check access details when they are known</li>
-          <li>See charges and opening status where available</li>
-          <li>Help improve the map by adding or updating locations</li>
+          <li>In Paris, look for public sanisettes, parks, museums, department stores and larger transport hubs.</li>
+          <li>Let automated toilets complete their cleaning cycle before trying to enter.</li>
+          <li>If a café or bar toilet is not clearly public, assume it is for customers unless staff say otherwise.</li>
+          <li>Motorway service areas and rest areas are useful toilet stops on longer journeys.</li>
+          <li>Keep a contactless card or small amount of change available for paid facilities.</li>
+          <li>Opening information is not always published, so it is sensible to check more than one nearby option when possible.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrapper style1 align-left sl-section" id="faq">
+      <div class="inner sl-narrow">
+        <h2>Common questions</h2>
+        <div class="sl-faq">
+          <details><summary>Are public toilets free in France?</summary><div class="sl-faq-answer"><p>Some are free, including Paris sanisettes. Others may charge a small fee, particularly in tourist areas, transport hubs or privately managed facilities.</p></div></details>
+          <details><summary>Can I use toilets in cafés and restaurants?</summary><div class="sl-faq-answer"><p>Usually yes if you are a customer. Some cafés, bars and restaurants allow non-customers to use their toilets, but this varies. If in doubt, it is polite to ask first.</p></div></details>
+          <details><summary>What are Paris sanisettes?</summary><div class="sl-faq-answer"><p>Sanisettes are automated public toilets found around Paris. They are self-cleaning and usually free to use, although they may close briefly while cleaning takes place.</p></div></details>
+          <details><summary>Do I need cash?</summary><div class="sl-faq-answer"><p>Not always. Many toilets are free, and many paid facilities now accept contactless payment. A small amount of change can still be useful when travelling.</p></div></details>
+          <details><summary>Are toilets available on French motorways?</summary><div class="sl-faq-answer"><p>Yes. Motorway service areas and many rest areas provide toilets. Larger staffed service areas usually have more facilities than smaller rest areas.</p></div></details>
+          <details><summary>What if a toilet is closed?</summary><div class="sl-faq-answer"><p>Opening hours can vary, and some toilets may close temporarily for cleaning, maintenance or local reasons. Sat Lav displays known opening information and allows the community to report problems where supported.</p></div></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper style1 align-left sl-section" id="cities">
+      <div class="inner sl-narrow">
+        <h2>Browse by city</h2>
+        <p>Planning ahead? Browse public toilet guides for some of France's most visited cities, or use the app for live nearby results based on your current location.</p>
+        <div class="sl-city-grid">
+          <a href="/toilets/france/paris/" class="button">Paris</a>
+          <a href="/toilets/france/lyon/" class="button">Lyon</a>
+          <a href="/toilets/france/marseille/" class="button">Marseille</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper style1 align-left sl-section">
+      <div class="inner sl-narrow">
+        <h2>Built for quick decisions</h2>
+        <p>Sat Lav is designed for the moment you actually need the information: where the toilet is, how far away it is, and what is known about access.</p>
+        <ul class="sl-bullets sl-bullets-clean">
+          <li>Nearby public toilets on a live map</li>
+          <li>Walking distance and estimated time</li>
+          <li>Accessibility and baby-changing details when known</li>
+          <li>Charges and opening status where available</li>
+          <li>Recent community verification where available</li>
         </ul>
       </div>
     </section>
 
     <section class="wrapper style1 align-left sl-section">
       <div class="inner sl-narrow">
-        <h2>France toilet data</h2>
-        <p>Sat Lav uses open data and app updates to make public toilet information easier to use. When the source data does not confirm a detail, the app leaves it unknown rather than guessing.</p>
+        <h2>France coverage at a glance</h2>
+        <p>Sat Lav maps public toilets across France, including large cities, tourist areas and smaller communities where reliable toilet information can be harder to find.</p>
+        <p>Where information is available, the app can display:</p>
+        <ul class="sl-bullets sl-bullets-clean">
+          <li>Accessibility information</li>
+          <li>Baby-changing details</li>
+          <li>Charges and opening status</li>
+          <li>Recent community verification</li>
+        </ul>
+        <p><a href="/download.html">Download Sat Lav</a> to find nearby toilets using your current location.</p>
+      </div>
+    </section>
+
+    <section class="wrapper style1 align-left sl-section" id="data">
+      <div class="inner sl-narrow">
+        <h2>Where Sat Lav gets its information</h2>
+        <p>Sat Lav combines public toilet data from open sources with updates and verification from people using the app.</p>
+        <p>Public toilet data is often incomplete or inconsistent, so Sat Lav avoids guessing. If opening hours, charges, accessibility details or baby-changing facilities are not known, they are shown as unknown rather than assumed.</p>
+        <p>Information changes over time. Opening hours, charges and access arrangements can change without notice, and community reports help improve the map where supported.</p>
         <p><a href="/coverage.html">View Sat Lav coverage</a> or <a href="/data.html">read more about the data</a>.</p>
       </div>
     </section>
 
     <footer class="wrapper style1 align-center">
       <div class="inner">
-        <p class="sl-footer-links">
-          <a href="/privacy.html">Privacy</a> ·
-          <a href="/support.html">Support</a> ·
-          <a href="/data.html">Data</a> ·
-          <a href="/coverage.html">Coverage</a> ·
-          <a href="/toilets/near-me/">Toilets near me</a> ·
-          <a href="/toilets/">Toilets by location</a>
-        </p>
-        <p class="copyright">
-          &copy; Sat Lav. All rights reserved.
-          <span class="sl-muted">Contains data from ToiletMap UK (CC BY 4.0).</span>
-        </p>
+        <p class="sl-footer-links"><a href="/privacy.html">Privacy</a> · <a href="/support.html">Support</a> · <a href="/data.html">Data</a> · <a href="/coverage.html">Coverage</a> · <a href="/toilets/near-me/">Toilets near me</a> · <a href="/toilets/">Toilets by location</a></p>
+        <p class="copyright">&copy; Sat Lav. All rights reserved. <span class="sl-muted">Contains data from ToiletMap UK (CC BY 4.0).</span></p>
       </div>
     </footer>
 
