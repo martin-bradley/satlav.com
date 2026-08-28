@@ -8619,11 +8619,15 @@ input, select, textarea {
   padding: 0.9rem 1.2rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 1rem;
 }
 
 .sl-brand {
+  display: inline-flex;
+  align-items: center;
+  width: 34px;
+  height: 34px;
   font-weight: 700;
   text-decoration: none;
   color: #111;
@@ -9388,4 +9392,372 @@ body, input, select, textarea {
 
 footer .copyright {
   margin: 0;
+}
+
+/* ========================================================================== 
+   Sat Lav home refresh — 2026 marketing artwork
+   ========================================================================== */
+
+.sl-home-shell {
+  width: min(1180px, calc(100% - 3rem));
+  margin: 0 auto;
+}
+
+.sl-home-kicker {
+  margin: 0 0 0.65rem;
+  color: #007aff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.sl-home-hero {
+  overflow: hidden;
+  background: linear-gradient(180deg, #f8fbfd 0%, #ffffff 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.sl-home-hero-grid {
+  min-height: 660px;
+  padding: 3.25rem 0 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.78fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+}
+
+.sl-home-hero-copy {
+  align-self: center;
+  padding: 2rem 0 4.5rem;
+}
+
+.sl-home-hero-lockup {
+  display: block;
+}
+
+.sl-home-hero-logo {
+  display: block;
+  width: clamp(90px, 9vw, 110px);
+  height: auto;
+  margin: 0 auto 0.75rem;
+}
+
+.sl-home-brand-label {
+  margin: 0 0 0.45rem;
+  color: rgba(0, 0, 0, 0.72);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.sl-home-hero h1 {
+  margin: 0 0 1rem;
+  max-width: 11ch;
+  font-size: clamp(3.4rem, 6vw, 6.4rem);
+  font-weight: 750;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.sl-home-hero .major {
+  max-width: 36rem;
+  margin: 0 0 1.25rem;
+  color: rgba(0, 0, 0, 0.62);
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  line-height: 1.55;
+}
+
+.sl-home-trust {
+  margin: 1rem 0 0;
+  color: rgba(0, 0, 0, 0.52);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.sl-home-hero-art {
+  align-self: end;
+  display: flex;
+  justify-content: center;
+}
+
+.sl-home-hero-art img {
+  display: block;
+  width: min(100%, 470px);
+  height: auto;
+  border-radius: 28px 28px 0 0;
+  box-shadow: 0 28px 70px rgba(5, 29, 47, 0.18);
+}
+
+.sl-home-intro {
+  padding: 4.5rem 0;
+  background: #ffffff;
+}
+
+.sl-home-intro-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2rem, 7vw, 7rem);
+  align-items: start;
+}
+
+.sl-home-intro h2,
+.sl-home-section-heading h2,
+.sl-home-coverage h2,
+.sl-home-download h2 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+.sl-home-intro h2 {
+  max-width: 14ch;
+  font-size: clamp(2rem, 3.4vw, 3.4rem);
+}
+
+.sl-home-intro-grid > div:last-child p {
+  max-width: 40rem;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.sl-home-features {
+  padding: 5rem 0 5.5rem;
+  background: #f5f7f9;
+  border-top: 1px solid rgba(0, 0, 0, 0.055);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.055);
+}
+
+.sl-home-section-heading {
+  max-width: 48rem;
+  margin-bottom: 2.5rem;
+}
+
+.sl-home-section-heading h2,
+.sl-home-coverage h2,
+.sl-home-download h2 {
+  font-size: clamp(2.35rem, 4vw, 4rem);
+}
+
+.sl-home-section-heading > p:last-child {
+  margin: 1rem 0 0;
+  color: rgba(0, 0, 0, 0.62);
+  font-size: 1.08rem;
+  line-height: 1.65;
+}
+
+.sl-home-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 2.2vw, 2rem);
+}
+
+.sl-home-feature-card {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 30px;
+  background: #0b1d29;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.1);
+}
+
+.sl-home-feature-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.sl-home-coverage {
+  padding: 5rem 0;
+  background: #ffffff;
+}
+
+.sl-home-coverage-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+  gap: clamp(2rem, 8vw, 7rem);
+  align-items: center;
+}
+
+.sl-home-coverage h2 {
+  max-width: 13ch;
+}
+
+.sl-home-coverage p:not(.sl-home-kicker) {
+  max-width: 44rem;
+  margin: 1.1rem 0 0;
+  color: rgba(0, 0, 0, 0.62);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.sl-home-coverage-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+  justify-self: center;
+  width: 100%;
+}
+
+.sl-home-coverage-actions .button {
+  width: 100%;
+  margin: 0;
+  text-align: center;
+}
+
+.sl-home-download {
+  padding: 4.75rem 0;
+  background: #071b29;
+  color: #ffffff;
+}
+
+.sl-home-download-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.sl-home-download h2,
+.sl-home-download p {
+  color: #ffffff;
+}
+
+.sl-home-download h2 {
+  max-width: 13ch;
+}
+
+.sl-home-download p:not(.sl-home-kicker) {
+  max-width: 38rem;
+  margin: 1rem 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.05rem;
+}
+
+.sl-home-download .sl-home-kicker {
+  color: #79bfff;
+}
+
+.sl-home-download-badges {
+  flex: 0 0 auto;
+  margin: 0;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 980px) {
+  .sl-home-hero-grid {
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+    gap: 2.5rem;
+  }
+
+  .sl-home-hero h1 {
+    font-size: clamp(3.2rem, 7vw, 5rem);
+  }
+
+  .sl-home-intro,
+  .sl-home-features,
+  .sl-home-coverage,
+  .sl-home-download {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .sl-home-shell {
+    width: min(100% - 2rem, 620px);
+  }
+
+  .sl-home-hero-grid {
+    padding-top: 2.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    text-align: center;
+  }
+
+  .sl-home-hero-copy {
+    padding: 0;
+  }
+
+  .sl-home-hero h1 {
+    max-width: none;
+    font-size: clamp(3rem, 14vw, 4.75rem);
+  }
+
+  .sl-home-hero .major {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sl-home-hero .sl-badges {
+    justify-content: center;
+  }
+
+  .sl-home-hero-logo {
+    width: 86px;
+  }
+
+  .sl-home-hero-art img {
+    width: min(88vw, 420px);
+  }
+
+  .sl-home-intro-grid,
+  .sl-home-coverage-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .sl-home-intro h2,
+  .sl-home-coverage h2,
+  .sl-home-download h2 {
+    max-width: none;
+  }
+
+  .sl-home-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .sl-home-feature-card {
+    border-radius: 22px;
+  }
+
+  .sl-home-download-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sl-home-download-badges {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sl-home-shell {
+    width: calc(100% - 1.4rem);
+  }
+
+  .sl-home-intro,
+  .sl-home-features,
+  .sl-home-coverage,
+  .sl-home-download {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .sl-home-section-heading {
+    margin-bottom: 1.5rem;
+  }
+
+  .sl-home-hero-art img {
+    width: 94vw;
+    max-width: 390px;
+    border-radius: 22px 22px 0 0;
+  }
 }
